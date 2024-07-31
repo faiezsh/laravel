@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<table>
+  <tr>
+    <th>User ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+      <th>Action</th>
+  </tr>
+    {% for user in users %}
+  <tr>
+
+    <td>{{user.id}}</td>
+    <td>{{user.first_name}}</td>
+    <td>{{user.last_name}}</td>
+      <td><a href="/updateuser/{{user.id}}">Edit</a></td>
+      <td><a href="/deleteuser/{{user.id}}">Delete</a></td>
+  </tr>
+    {%endfor%}
+</table>
+</body>
+</html>

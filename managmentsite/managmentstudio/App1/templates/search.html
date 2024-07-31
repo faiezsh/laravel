@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<center>
+    <form method="get">
+        {{filter.form.as_p}}
+        <button type="submit">Search</button>
+    </form>
+    <table>
+  <tr>
+    <th>User ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+      <th>Action</th>
+  </tr>
+    {% for user in filter.qs %}
+  <tr>
+
+    <td>{{user.id}}</td>
+    <td>{{user.first_name}}</td>
+    <td>{{user.last_name}}</td>
+      <td><a href="/updateuser/{{user.id}}">Edit</a></td>
+      <td><a href="/deleteuser/{{user.id}}">Delete</a></td>
+  </tr>
+    {%endfor%}
+</table>
+</center>
+</body>
+</html>

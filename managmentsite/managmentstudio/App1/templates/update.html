@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Data</title>
+</head>
+<body>
+<center>
+    <form name="update" method="post" action="/updateuser/{{users.id}}">
+        {% csrf_token %}
+        <pre>
+            First Name : <input type="text" name="tfirstname" value="" width="200"><br>
+            Last Name : <input type="text" name="tlastname" value="" width="200"><br>
+            <input type="submit" name="reg" value="Click to update" width="300" height="100">
+        </pre>
+        <a href="/search/">Home</a>
+
+    </form>
+</center>
+</body>
+</html>

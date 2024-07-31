@@ -1,0 +1,725 @@
+{
+	"info": {
+		"_postman_id": "ff9e1260-2c50-464b-9a78-1c62faee768f",
+		"name": "graduate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"modernDecoration\",\r\n    \"email\" : \"modernDecoration@gmail.com\",\r\n    \"password\" : \"123456789\",\r\n    \"name\" : \"modern Decoration\",\r\n    \"address\" : \"Damascus\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IP}}auth/register",
+							"host": [
+								"{{IP}}auth"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register/supCompany",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|VLc3SBv88tkHVRXfzmEPadG3KLZWwp7MRe88ZvqT",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"faiez11@gmail.com\",\r\n    \"password\":\"1234567890\",\r\n    \"userName\":\"faiez\",\r\n    \"name\":\"faiez\",\r\n    \"address\":\"fdgjkl\",\r\n    \"roll\":\"supCombany\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register/company",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register/engineer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|VLc3SBv88tkHVRXfzmEPadG3KLZWwp7MRe88ZvqT",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"faiez11@gmail.com\",\r\n    \"password\":\"1234567890\",\r\n    \"userName\":\"faiez\",\r\n    \"name\":\"faiez\",\r\n    \"address\":\"fdgjkl\",\r\n    \"roll\":\"Engineer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register/company",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"123456\",\r\n    \"userName\":\"sofian\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|h7YiFRAMImzjI9WHtwXx0WdkazD9w6c5jv9MUMbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.43.127:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"43",
+								"127"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showUsersEngineer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/showUser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"showUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showCompanySups",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}showCompany",
+							"host": [
+								"{{IP}}showCompany"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"living room\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/addCategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}showCategory",
+							"host": [
+								"{{IP}}showCategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "supCategory",
+			"item": [
+				{
+					"name": "addSupCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"supName\":\"chairs\",\r\n    \"name\":\"living room\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IP}}addSupCategory",
+							"host": [
+								"{{IP}}addSupCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showSupCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}show_supCategory/living room",
+							"host": [
+								"{{IP}}show_supCategory"
+							],
+							"path": [
+								"living room"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "model",
+			"item": [
+				{
+					"name": "addModel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "modelName",
+									"value": "rocking chair",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "ffff0000",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "200.5",
+									"type": "text"
+								},
+								{
+									"key": "scale",
+									"value": "0.1",
+									"type": "text"
+								},
+								{
+									"key": "path",
+									"type": "file",
+									"src": "/C:/Users/Fadi/Downloads/rocking-chair/source/Rocking_chair_SF.obj"
+								},
+								{
+									"key": "name",
+									"value": "chairs",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IP}}addModel",
+							"host": [
+								"{{IP}}addModel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_model",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|5X4XkgT57GjlMmGfk1BSoGTPPqQcivGlShtOUTNP",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}get_models/1",
+							"host": [
+								"{{IP}}get_models"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showModel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}showModel/1",
+							"host": [
+								"{{IP}}showModel"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Model by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|5X4XkgT57GjlMmGfk1BSoGTPPqQcivGlShtOUTNP",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}get_model/2",
+							"host": [
+								"{{IP}}get_model"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallColor",
+			"item": [
+				{
+					"name": "addColor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"color\":\"ff808080\",\r\n    \"price\":100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IP}}addcolor",
+							"host": [
+								"{{IP}}addcolor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showColor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/showcolor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"showcolor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "designDisplay",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IP}}designDisplay/engineer",
+							"host": [
+								"{{IP}}designDisplay"
+							],
+							"path": [
+								"engineer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showdesignDisplay",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|G4UHbRthU6z10qI3vxArwtxuWS3Y2p2BDAFHGUWY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}showdesignDisplay/modernDecoration",
+							"host": [
+								"{{IP}}showdesignDisplay"
+							],
+							"path": [
+								"modernDecoration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addRoom",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|5X4XkgT57GjlMmGfk1BSoGTPPqQcivGlShtOUTNP",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model\":[\r\n        [2,2,3,4,5,7]\r\n    ],\r\n    \"color\":\"ff808080\",\r\n    \"roomModelName\":\"first room\",\r\n    \"highe\":3,\r\n    \"whidth\":3,\r\n    \"length\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IP}}addRoom",
+							"host": [
+								"{{IP}}addRoom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showDesign",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "13|5X4XkgT57GjlMmGfk1BSoGTPPqQcivGlShtOUTNP",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}showDesign/1",
+							"host": [
+								"{{IP}}showDesign"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "IP",
+			"value": "http://127.0.0.1:8000/api/"
+		}
+	]
+}
